@@ -19,27 +19,22 @@ class NI_App(BaseMicroscopeApp):
     name = 'ni_app'
     
     def setup(self):
-        """
+        
         #Add hardware components
         print("Adding Hardware Components") 
-        add_path('IDS_ScopeFoundry')
-        from camera_hw import IdsHW
-        self.add_hardware(IdsHW(self, name='camA',cam_num=0))
-        self.add_hardware(IdsHW(self, name='camB',cam_num=1))
-        """
        #from ni_ao_hardware import NI_AO_hw
        #from ni_do_hardware import NI_DO_hw
         from ni_co_hardware import NI_CO_hw
        #self.add_hardware(NI_AO_hw(self))
        #self.add_hardware(NI_DO_hw(self))
         self.add_hardware(NI_CO_hw(self))
-        """"
+        
         #Add measurement components
         print("Create Measurement objects")
         add_path('ImageFlowCytometry_System')
         from IFC_measurement import IfcMeasure
         self.add_measurement(IfcMeasure(self))
-        """
+        
         # show ui
         if hasattr(self, "ui") and (self.ui is not None):
             self.ui.show()

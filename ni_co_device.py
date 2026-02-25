@@ -46,7 +46,7 @@ class NI_CO_device(object):
         #samps_per_chan(*or/)freq must be an integer! (maybe) 
         #if self.trigger:
         #    self.task.triggers.start_trigger.trig_type = nidaqmx.constants.TriggerType.DIGITAL_EDGE
-        #   self.task.triggers.start_trigger.cfg_dig_edge_start_trig(trigger_source = self.trigger_source, trigger_edge = self.dict.get(self.trigger_edge))
+        #    self.task.triggers.start_trigger.cfg_dig_edge_start_trig(trigger_source = self.trigger_source, trigger_edge = self.dict.get(self.trigger_edge))
                                                                      
     def start_task(self):
         
